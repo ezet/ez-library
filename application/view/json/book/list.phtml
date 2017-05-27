@@ -1,0 +1,11 @@
+<?php
+/**
+@author     Lars Kristian Dahl <http://www.krisd.com>
+@copyright  Copyright (c) 2011 Lars Kristian Dahl <http://www.krisd.com>
+@license    http://www.apache.org/licenses/LICENSE-2.0
+@version    SVN: $Id$
+*/
+foreach ($books as $book) {
+    $json[] = $book->toArray();
+}
+echo json_encode($json);

@@ -1,0 +1,29 @@
+<!--top layoutbar-->
+<div class="layoutBar fg-toolbar ui-toolbar ui-widget-header ui-corner-tl ui-corner-tr"></div>
+
+<!--logo-->
+<div id="logo"><a href="<?php echo __BASE_URL ?>"><img src="<?php echo __BASE_URL ?>/media/images/library_logo.png"  alt="logo"/></a></div>
+
+<!--menuitems-->
+<div id="menuItems">
+    <button id="btnAddNewRow" class="menu" style="background-image: url(<?php echo __BASE_URL; ?>/media/images/icons/add.png);" title="Add book"></button>
+    <button id="btnDeleteRow" class="menu" style="background-image: url(<?php echo __BASE_URL; ?>/media/images/icons/delete.png);" title="Delete book"></button>
+    <button id="closeAllDetails" type="button" class="menu" style="background-image: url(<?php echo __BASE_URL; ?>/media/images/icons/cancel.png);" title="Close all rows"></button>
+    <a href="<?php echo __BASE_URL . '/user/edit'; ?>"><button class="menu" id="" style="background-image: url(<?php echo __BASE_URL; ?>/media/images/icons/settings.png);" title="Edit profile"></button></a>
+    <!--<button class="menu" style="background-image: url(<?php echo __BASE_URL; ?>/media/images/icons/edit.png);"></button>-->
+    <button id="btnHelp"class="menu" style="background-image: url(<?php echo __BASE_URL; ?>/media/images/icons/help.png);" title="Help"></button>
+    <a href="<?php echo __BASE_URL . '/data/initdb.php'; ?>"><button class="menu" style="background-image: url(<?php echo __BASE_URL; ?>/media/images/icons/database.png);" title="Reset Database"></button></a>
+    <a href="<?php echo __BASE_URL . '/user/logout'; ?>"><button class="menu" style="background-image: url(<?php echo __BASE_URL; ?>/media/images/icons/logout.png);" title="Logout"></button></a>
+
+</div>
+
+<!--bottom layoutbar with footer-->
+<div class="layoutBar fg-toolbar ui-toolbar ui-widget-header ui-corner-bl ui-corner-br">
+
+
+        <div id="title"><?php echo $firstname.'´s Library'; ?></div>
+        <div id="footer">
+            <?php include __APP_PATH . '/view/footer.phtml';?>
+        </div>  <!-- /footer -->
+
+</div>

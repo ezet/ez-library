@@ -1,0 +1,155 @@
+/**
+ * @author     Lars Kristian Dahl <http://www.krisd.com>
+ * @copyright  Copyright (c) 2011 Lars Kristian Dahl <http://www.krisd.com>
+ * @license    http://www.apache.org/licenses/LICENSE-2.0
+ * @version    SVN: $Id$
+ *
+ * Common CSS styling
+*/
+
+/*root {
+    display: block;
+}*/
+
+body, * {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font: 80%/1.45em "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+    /*    font: 80%/1.45em Arial,"Times New Roman", Georgia, Serif;*/
+    color: #333333;
+    background-color: #fff;
+}
+
+h1 {
+    font-size: 1.7em;
+    margin: 5px 0px;
+}
+
+
+/*************************** LAYOUT ******************************/
+#wrap{
+    float: left;
+}
+
+div#header-wrapper {
+    width: auto;
+    position: relative;
+
+}
+/*
+div#body-wrapper {
+    float: left;
+    width: auto;
+    position: relative;
+    border: 0px black solid;
+
+}
+*/
+div#slidebar-wrapper {
+    height: 400px;
+    width: 200px;
+    border: 0px black solid;
+    position: relative;
+    float: left;
+
+
+}
+
+div#content-wrapper {
+    /*    height: 90%;*/
+    /*    width: 80%;*/
+    margin: 20px;
+    /*    float: right;*/
+    position: relative;
+    float: left;
+
+}
+#menuwrap{
+    margin: 20px;
+}
+div#menu {
+    width: 100%;
+    position: relative;
+    float: left;
+}
+#menuItems{
+    float: right;
+    margin-top: 50px;
+}
+div#logo {
+    float: left;
+    padding: 20px 100px;
+}
+.layoutBar{
+    height: 35px;
+    width: 100%;
+    float: left;
+    font-size: 0.6em;
+}
+
+button.menu {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    margin: 0px 10px;
+    height: 48px;
+    width: 48px;
+    border: none;
+}
+
+button.menu:hover {
+    cursor: pointer;
+}
+
+button.menu:disabled {
+    opacity: 0.3;
+    filter:alpha(opacity=-30)
+
+}
+
+div#booktable_wrapper{
+    width: 100%;
+}
+
+div#booktable_wrapper input {
+    padding: 0px;
+    width: auto;
+    margin: 5px;
+    font-size : inherit;
+    display: inline;
+    font-size: 0.9em;
+}
+
+div#booktable_wrapper tfoot input {
+    /*    width: 30px;*/
+    margin: 2px;
+}
+
+div#booktable_wrapper select {
+    /*width : auto;*/
+    margin: 5px;
+    padding: 2px;
+}
+
+div.details-block {
+    float:left;
+    width: 30%;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+#title {
+    float: left;
+    margin-left: 100px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+#footer {
+    float: right;
+    margin-top: 10px;
+    margin-right: 20px;
+}

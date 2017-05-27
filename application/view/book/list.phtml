@@ -1,0 +1,11 @@
+<?php
+use ezmvc\lib\html;
+var_dump($books);
+if (!is_array($books)) {
+    $books = array($books);
+}
+
+foreach($books as $book) {
+?>
+
+<?php echo '<li>', Html::e($book->Title), '</li>'; } ?>

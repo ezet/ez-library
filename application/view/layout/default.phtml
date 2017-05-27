@@ -1,0 +1,54 @@
+<?php
+/*
+ * @author     Lars Kristian Dahl <http://www.krisd.com>
+ * @copyright  Copyright (c) 2011 Lars Kristian Dahl <http://www.krisd.com>
+ * @license    http://www.apache.org/licenses/LICENSE-2.0
+ * @version    SVN: $Id$
+ */
+
+namespace ezmvc\view;
+?>
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title><?php echo $pagetitle ?></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo __BASE_URL ?>/media/css/default.css"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo __BASE_URL; ?>/media/css/jquery/smoothness/jquery-ui-1.8.4.custom.css"/>
+        <script type="text/javascript" src="https://www.google.com/jsapi?key=ABQIAAAAxLUY4IMs9aUZnipANmGKsRR1tdvgEygv2uq6rMwoCLkTMQJr0RRim9vW8CI6htHnRr5qVz2D7Y7q9Q"></script>
+        <script type="text/javascript">
+            google.load("jquery", "1");
+            google.load("jqueryui", "1");
+        </script>
+    </head>
+    <?php flush(); ?>
+    <body>
+
+        <div id="wrapper">
+           <!--top layoutbar-->
+            <div class="layoutbar fg-toolbar ui-toolbar ui-widget-header ui-corner-tl ui-corner-tr ui-helper-clearfix"></div>
+               <!--logo-->
+            <div id="logo"><a href="<?php echo __BASE_URL ?>"><img src="<?php echo __BASE_URL ?>/media/images/library_logo.png"  alt="logo"/></a></div>
+
+            <!--content-->
+                <div id="content"><?php if (isset($content))
+                    echo $content; ?>
+                </div>
+            <!-- /content -->
+            <!--bottom layoutbar with footer-->
+            <div class="layoutbar fg-toolbar ui-toolbar ui-widget-header ui-corner-bl ui-corner-br ui-helper-clearfix">
+                <div id="title"><?php if (isset($firstname))
+                    echo $firstname.'´s Library'; ?>
+                </div>
+                <div id="footer">
+                    
+                    <?php
+                        
+                    include __APP_PATH . '/view/footer.phtml'; ?>
+                </div>  <!-- /footer -->
+            </div>
+        </div> <!-- /wrapper -->
+    </body>
+</html>

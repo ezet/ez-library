@@ -1,0 +1,18 @@
+# This is used to configure apache, allowing us to use URLs on the form /www.site.com/user/register
+
+# Enables the RewriteEngine
+RewriteEngine On
+
+
+# RewriteBase is needed if your setup uses apache aliases.
+# RewriteBase should point to the alias you are using for your website,
+# and must be uncommented to take effect.
+RewriteBase /www/dev/ez-library
+
+
+# These are the actual rewrite rules and conditions, and should not be changed.
+# You can however place these in directly in your apache site configuration if you have access,
+# and comment these out completely.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*) index.php/?$1 [QSA,L]

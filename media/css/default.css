@@ -1,0 +1,324 @@
+/**
+ * @author     Lars Kristian Dahl <http://www.krisd.com>
+ * @copyright  Copyright (c) 2011 Lars Kristian Dahl <http://www.krisd.com>
+ * @license    http://www.apache.org/licenses/LICENSE-2.0
+ * @version    SVN: $Id$
+ *
+ * Common CSS styling
+*/
+
+/*root {
+    display: block;
+}*/
+
+body, * {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial,"Times New Roman", Georgia, Serif;
+}
+
+body {
+    /*    background-color: #cccccc;*/
+}
+
+h1 {
+    font-size: 1.7em;
+    margin: 5px 0px;
+}
+
+/*************************** LINKS ******************************/
+a, a:visited {
+    color: #336699;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #003366;
+}
+
+#logo a, #logo a:visited, #logo a:hover {
+    color: #eee;
+    text-shadow: 3px 3px 5px #000;
+}
+
+
+/*************************** TOPMENU ******************************/
+
+div#topmenu {
+    font-size: 12px;
+    font-weight: bold;
+    color: #CCCC99;
+    text-align: right;
+}
+
+div#topmenu a {
+    color: #FFF8DC;
+    text-decoration: underline;
+    /*    font-variant: small-caps;*/
+}
+
+div#topmenu a:hover{
+    text-decoration: underline;
+}
+
+div#topmenu ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+div#topmenu li {
+    display: inline;
+    list-style-type: none;
+    margin: 0px 8px;
+}
+
+
+
+/*************************** SLIDEBAR ******************************/
+
+
+
+/*************************** LAYOUT ******************************/
+
+#wrapper, #header, #banner, #mainmenu, #content, #footer {
+}
+
+#wrapper {
+   margin: 20px;
+   position: relative;
+
+}
+
+
+.layoutbar {
+
+    height: 35px;
+    width: 100%;
+    float: left;
+    font-size: 0.6em;
+}
+
+div#logo {
+    float: left;
+    padding: 100px 100px;
+}
+
+
+#content {
+    font-size: 0.8em;
+    float: left;
+    max-width: 600px;
+}
+div#content {
+    position: relative;
+    margin: auto;
+    padding: 20px 30px;
+}
+#title{
+    float: left;
+    margin-left: 100px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: lighter;
+}
+   #footer {
+   
+    padding-top: 10px;
+    padding-right: 20px;
+    float: right;
+}
+
+/*************************** GENERAL CONTENT ******************************/
+
+div.rounded-wrapper {
+    margin-top: 20px;
+    
+
+}
+
+div.rounded-content {
+    margin: 10px;
+    float: left;
+}
+
+div.rounded-wrapper textarea {
+    width: 255px;
+    max-width: 300px;
+    margin: 0px;
+}
+
+
+/*************************** COMMENTS ******************************/
+div.comment-wrapper {
+    margin: 20px 0px;
+}
+
+
+
+/*************************** PROFILE ******************************/
+div#profile {
+
+}
+
+div#profile-image {
+    padding-top: 10px;
+    /*    border: 1px black dashed;*/
+}
+
+div#profile-info {
+
+}
+
+
+/*************************** IMAGES ******************************/
+
+img.photo {
+    background: #DDD;
+    float: right !important;
+    padding: 25px 25px;
+}
+
+img.profile {}
+
+
+
+/*************************** FORMS ******************************/
+
+div#form-wrapper {
+
+}
+
+form {
+   
+}
+
+label {
+    /*    margin: 3px 0px;*/
+    width : 100px;
+    padding: 4px 5px;
+    font-size : 1em;
+    font-weight : bold;
+    text-align : right;
+    float : left;
+  
+}
+
+input {
+    padding: 2px;
+    width: 250px;
+    margin: 10px;
+    margin-right: 10px !important;
+    font-size : 1.4em;
+    font-family : Calibri, 'Arial Narrow', sans-serif;
+    display: block;
+}
+
+select {
+    width : 250px;
+}
+
+input[type="radio"] {
+    display: inline;
+    width: 30px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    }
+
+input[name="postalcode"] {
+    width : 120px;
+}
+
+
+
+input[type="submit"], input[type="reset"], button {
+    margin: 10px;
+    display: inline;
+    width: auto;
+    padding: 0px 15px;
+}
+
+input[type="submit"] {
+    margin-left: 130px;
+}
+
+textarea {
+    width: 480px;
+    max-width: 480px;
+    height: 150px;
+    margin: 10px;
+}
+
+input[type="file"] {
+    margin-left: 120px;
+    padding: 2px 20px;
+    font-size: 16px;
+}
+
+div.editor-wrapper iframe {
+    max-width: 500px;
+}
+
+.editor-wrapper label {
+    width: 30px;
+}
+
+.editor-wrapper input[type="text"] {
+    margin-left: 0px;
+    width: 430px;
+}
+
+#search input {
+    padding: 0px;
+    width: 150px;
+    margin: 4px 0px;
+}
+
+/*************************** MISC ******************************/
+
+div.error {
+    margin: 10px;
+    border: 1px red solid;
+    padding: 10px 10px;
+    color : #555;
+    background-color: #FDF;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+div.warning {
+
+}
+
+div.clear {
+    clear: both;
+}
+
+span#welcome {
+    margin: 0px 10px;
+    line-height: 2;
+}
+
+.small, .date {
+    font-size : 0.85em;
+    font-weight : normal;
+    font-family : 'Arial Narrow', sans-serif;
+    color: #555;
+
+}
+
+ul {
+    margin: 10px 0px;
+    padding-left: 20px;
+}
+
+/*remove this*/
+div#content table {
+    color: white;
+    font-size: inherit;
+}
+
+div#recaptcha_area {
+    margin: auto;
+}

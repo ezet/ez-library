@@ -1,0 +1,149 @@
+/* 
+    Document   : common
+    Created on : 27.apr.2011, 16:39:17
+    Author     : Lars Kristian Dahl <http://www.krisd.com>
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+/*    display: block;*/
+}
+/*************************** FORMS ******************************/
+
+div#form-wrapper {
+
+}
+
+form.common {
+}
+
+.common label {
+    /*    margin: 3px 0px;*/
+    width : 120px;
+    margin-right : 5px;
+    padding: 6px 5px;
+    font-size : 1em;
+    font-weight : bold;
+    text-align : right;
+    float : left;
+    display: block;
+}
+
+.common input {
+    padding: 2px;
+    width: 250px;
+    margin: 10px;
+    margin-right: 10px !important;
+    font-size : 1.4em;
+/*    font-family : Calibri, 'Arial Narrow', sans-serif;*/
+    display: block;
+}
+
+.common select {
+    width : 250px;
+}
+
+.common input[type="radio"] {
+    display: inline;
+    width: 30px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    }
+
+.common input[name="postalcode"] {
+    width : 120px;
+}
+
+
+
+.common input[type="submit"], .common input[type="reset"], .common button {
+    margin: 10px;
+    display: inline;
+    width: auto;
+    padding: 0px 15px;
+}
+
+.common input[type="submit"] {
+    margin-left: 130px;
+}
+
+.common textarea {
+    width: 480px;
+    max-width: 480px;
+    height: 150px;
+    margin: 10px;
+}
+
+.common input[type="file"] {
+    margin-left: 120px;
+    padding: 2px 20px;
+    font-size: 16px;
+}
+
+div.editor-wrapper iframe {
+    max-width: 500px;
+}
+
+.editor-wrapper label {
+    width: 30px;
+}
+
+.editor-wrapper input[type="text"] {
+    margin-left: 0px;
+    width: 430px;
+}
+
+#search input {
+    padding: 0px;
+    width: 150px;
+    margin: 4px 0px;
+}
+
+/*************************** MISC ******************************/
+
+div.error {
+    margin: 10px;
+    border: 1px red solid;
+    padding: 10px 10px;
+    color : #555;
+    background-color: #FDF;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+div.warning {
+
+}
+
+div.clear {
+    clear: both;
+}
+
+span#welcome {
+    margin: 0px 10px;
+    line-height: 2;
+}
+
+.small, .date {
+    font-size : 0.85em;
+    font-weight : normal;
+    font-family : 'Arial Narrow', sans-serif;
+    color: #555;
+}
+
+ul {
+    margin: 10px 0px;
+    padding-left: 20px;
+}
+
+div#recaptcha_area {
+    margin: auto;
+}

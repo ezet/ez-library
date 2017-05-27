@@ -1,0 +1,91 @@
+<?php
+/*
+ * @author     Lars Kristian Dahl <http://www.krisd.com>
+ * @copyright  Copyright (c) 2011 Lars Kristian Dahl <http://www.krisd.com>
+ * @license    http://www.apache.org/licenses/LICENSE-2.0
+ * @version    SVN: $Id$
+ */
+
+namespace ezmvc\view;
+?>
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+        <title><?php echo $pagetitle ?></title>
+
+        <!-- CSS files -->
+        <link rel="stylesheet" type="text/css" href="<?php echo __BASE_URL; ?>/media/css/library.css"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo __BASE_URL; ?>/media/css/common.css"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo __BASE_URL; ?>/media/css/columnpicker.css"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo __BASE_URL; ?>/media/css/jquery/smoothness/jquery-ui-1.8.4.custom.css"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo __BASE_URL; ?>/media/css/jquery/datatables.css"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo __BASE_URL; ?>/media/jnotify/jquery/jNotify.jquery.css"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo __BASE_URL; ?>/media/css/jquery.qtip.css"/>
+        <?php if (isset($style))
+            echo '<link rel="stylesheet" type="text/css" href="', __BASE_URL, '/media/css/', $style, '.css"/>'; ?>
+
+        <!-- Script files -->
+        <script type="text/javascript" src="https://www.google.com/jsapi?key=ABQIAAAAxLUY4IMs9aUZnipANmGKsRR1tdvgEygv2uq6rMwoCLkTMQJr0RRim9vW8CI6htHnRr5qVz2D7Y7q9Q"></script>
+        <script type="text/javascript">
+            google.load('jquery', '1');
+            google.load('jqueryui', '1');
+            google.load('search', '1');
+        </script>
+        <script type="text/javascript" src="<?php echo __BASE_URL ?>/media/js/jquery/jquery.qtip.min.js"></script>
+        <script type="text/javascript" src="<?php echo __BASE_URL ?>/media/jnotify/jquery/jquery.jnotify.js"></script>
+        <script type="text/javascript" src="<?php echo __BASE_URL ?>/media/js/jquery/jquery.datatables.min.js"></script>
+        <script type="text/javascript" src="<?php echo __BASE_URL ?>/media/js/jquery/jquery.jeditable.min.js"></script>
+
+        <script type="text/javascript" src="<?php echo __BASE_URL ?>/media/js/jquery.datatables.editable.js"></script>
+        <script type="text/javascript" src="<?php echo __BASE_URL ?>/media/js/jquery.rate.js"></script>
+        <script type="text/javascript" src="<?php echo __BASE_URL ?>/media/js/columnpicker.js"></script>
+        <script type="text/javascript" src="<?php echo __BASE_URL ?>/media/js/library.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                // global public url variable
+                _BASE_URL = '<?php echo __BASE_URL; ?>';
+
+                // Set up the book table.
+                var bookTable = initBookTable();
+                
+                // Attach misc standalone event handlers
+                initEvents(bookTable);
+
+                // Set up the date pickers
+                initDatepickers();
+            });
+        </script>
+
+    </head>
+    <!-- Send the head immediately so the client can start interpreting the JS -->
+    <?php flush(); ?>
+        <body>
+            <div id="wrap">
+                <div id="header-wrapper">
+                    <div id="menuwrap">
+                        <div id="menu"> 
+                        <?php include __APP_PATH . '/view/library/menu.phtml'; ?>
+                    </div>
+                </div>
+
+            </div> <!-- /header -->
+
+
+            <!--<div id="body-wrapper">-->
+            <div id="content-wrapper">
+                <?php if (isset($content))
+                            echo $content; ?>
+                    </div> <!-- /content -->
+                    <!--</div> /body -->
+
+
+                </div>
+        <?php include __APP_PATH . '/view/book/add.phtml'; ?>
+        <?php include __APP_PATH . '/view/library/help.phtml'; ?>
+    </body>
+</html>

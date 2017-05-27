@@ -1,0 +1,23 @@
+<?php
+/* 
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+use ezmvc\lib\html;
+?>
+<div class="rounded-wrapper">
+    <h2><?php echo Html::e($book->Title); ?></h2>
+    <div class="rounded-content">
+         <ul>
+            <li>Isbn: <?php echo $book->Isbn; ?></li>
+            <li>Author: <?php echo $book->Author; ?></li>
+            <li>Publisher: <?php echo $book->Publisher; ?></li>
+            <li>Date Published: <?php echo $book->DatePublished; ?></li>
+            <li>Synopsis: <?php echo "<br>$book->Synopsis"; ?></li>
+            <li>Rating: <?php echo $book->Rating; ?></li>
+            <li>Review: <?php echo $book->Review; ?></li>
+        </ul>
+     </div>
+
+    <div class="clear"></div>
+</div>

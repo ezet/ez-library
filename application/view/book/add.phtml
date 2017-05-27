@@ -1,0 +1,74 @@
+<?php
+
+/**
+ * @author     Lars Kristian Dahl <http://www.krisd.com>
+ * @copyright  Copyright (c) 2011 Lars Kristian Dahl <http://www.krisd.com>
+ * @license    http://www.apache.org/licenses/LICENSE-2.0
+ * @version    SVN: $Id$
+ */
+use ezmvc\lib\html;
+
+echo
+Html::form(null, null,
+        array(
+            'id' => 'formAddNewRow',
+            'class' => 'common',
+            'title' => 'Add new book',
+            'enctype' => 'multipart/form-data',
+        )
+),
+
+Html::formLabel('Isbn'),
+Html::formInput('Isbn', null, array('rel' => 2, 'id' => 'isbn'));
+?>
+
+<button name="isbnLookup" id="isbnLookup" disabled="disabled">Fetch data</button>
+<br/>
+
+
+<?php echo
+Html::formLabel('Cover'),
+Html::formFile('Cover'),
+
+
+Html::formLabel('Title'),
+Html::formInput('Title', null, array('rel' => 3)),
+
+Html::formLabel('Author'),
+Html::formInput('Author', null, array('rel' => 4)),
+
+Html::formLabel('Publisher'),
+Html::formInput('Publisher', null, array('rel' => 5)),
+
+Html::formLabel('DatePublished', 'Date published'),
+Html::formInput('DatePublished', null, array('class' => 'datepicker', 'rel' => 6)),
+
+Html::formLabel('Synopsis'),
+Html::formTextarea('Synopsis'),
+
+'<br/>',
+
+Html::formLabel('CategoryName', 'Category'),
+Html::formInput('CategoryName', null, array('rel' => 8)),
+        
+Html::formLabel('Tags'),
+Html::formInput('Tags'),
+
+Html::formLabel('Rating'); ?>
+<select name="form[Rating]" rel="9">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+</select>
+<br/><br/>
+<?php echo
+
+Html::formLabel('Review'),
+Html::formTextarea('Review'),
+
+'<br/>',
+
+Html::formEnd();

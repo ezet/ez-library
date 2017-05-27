@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @author     Lars Kristian Dahl <http://www.krisd.com>
+ * @copyright  Copyright (c) 2011 Lars Kristian Dahl <http://www.krisd.com>
+ * @license    http://www.apache.org/licenses/LICENSE-2.0
+ * @version    SVN: $Id$
+ */
+use ezmvc\lib\html;
+
+echo
+
+Html::form('POST', null, array('enctype' => 'multipart/form-data')),
+'<div class="rounded-wrapper">',
+Html::formLabel('Cover'),
+Html::formFile('Cover', null, array('rel' => 1)),
+Html::formSubmit('upload', 'Upload');
+Html::formEnd();
+'</div>';

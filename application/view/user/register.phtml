@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * @author     Lars Kristian Dahl <http://www.krisd.com>
+ * @copyright  Copyright (c) 2011 Lars Kristian Dahl <http://www.krisd.com>
+ * @license    http://www.apache.org/licenses/LICENSE-2.0
+ * @version    SVN: $Id$
+ */
+use ezmvc\lib\html;
+
+
+?>
+<h1>Register</h1>
+Get your own personal library archive now, completely FREE!<br/>
+Tired of waiting for websites and content to load? With this AJAX based archive you'll never have to wait again. Browse thousands of books in a snap!
+<?php
+
+Html::injectModel($user);
+
+
+echo
+'<div class="rounded-wrapper">',
+
+Html::formErrors(),
+
+Html::form('POST', null, array('enctype' => 'multipart/form-data')),
+
+Html::formLabel('FirstName', 'Firstname'),
+Html::formInput('FirstName', null, array('autofocus' => 'autofocus')),
+
+Html::formLabel('LastName', 'Lastname'),
+Html::formInput('LastName'),
+
+Html::formLabel('Username'),
+Html::formInput('Username'),
+
+Html::formLabel('Password'),
+Html::formPassword('Password'),
+
+Html::formLabel('ConfirmPassword', 'Confirm Password'),
+Html::formPassword('ConfirmPassword'),
+
+Html::formLabel('Email'),
+Html::formEmail('Email'),
+
+
+Html::formSubmit('register', 'Register'),
+Html::formEnd(),
+'</div>';

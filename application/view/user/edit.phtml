@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @author     Lars Kristian Dahl <http://www.krisd.com>
+ * @copyright  Copyright (c) 2011 Lars Kristian Dahl <http://www.krisd.com>
+ * @license    http://www.apache.org/licenses/LICENSE-2.0
+ * @version    SVN: $Id$
+ */
+use ezmvc\lib\html;
+
+Html::injectModel($user);
+
+echo
+Html::formErrors(),
+        
+'<div class="rounded-wrapper">',
+
+Html::form('POST', null, array('enctype' => 'multipart/form-data')),
+
+Html::formLabel('FirstName', 'Firstname'),
+Html::formInput('FirstName', null, array('autofocus' => 'autofocus')),
+
+Html::formLabel('LastName', 'Lastname'),
+Html::formInput('LastName'),
+
+Html::formLabel('Username'),
+Html::formInput('Username'),
+
+Html::formLabel('Password'),
+Html::formPassword('Password'),
+
+Html::formLabel('ConfirmPassword', 'Confirm Password'),
+Html::formPassword('ConfirmPassword'),
+
+Html::formLabel('Email'),
+Html::formEmail('Email'),
+
+Html::formSubmit('save', 'Save'),
+Html::formEnd(),
+'</div>';

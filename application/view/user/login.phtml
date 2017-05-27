@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @author     Lars Kristian Dahl <http://www.krisd.com>
+ * @copyright  Copyright (c) 2011 Lars Kristian Dahl <http://www.krisd.com>
+ * @license    http://www.apache.org/licenses/LICENSE-2.0
+ * @version    SVN: $Id$
+ */
+use ezmvc\lib\html;
+
+Html::injectModel($form);
+?>
+
+<h1>Login</h1>
+Don't own an account yet? Get one <?php echo Html::link('user/register/', 'here'); ?>, its free!<br/>
+Lost your password? Too bad, a password recovery feature hasn't been implemented yet.
+
+<?php
+echo Html::formErrors();
+echo '<div class="rounded-wrapper">';
+echo Html::form();
+
+echo Html::formLabel('username');
+echo Html::formInput('username', null, array('autofocus' => 'autofocus'));
+
+echo Html::formLabel('password');
+echo Html::formPassword('password');
+
+echo Html::formSubmit('login', 'Login');
+echo Html::formEnd();
+echo '</div>';

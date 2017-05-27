@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @author     Lars Kristian Dahl <http://www.krisd.com>
+ * @copyright  Copyright (c) 2011 Lars Kristian Dahl <http://www.krisd.com>
+ * @license    http://www.apache.org/licenses/LICENSE-2.0
+ * @version    SVN: $Id$
+ */
+use ezmvc\lib\html;
+?>
+<h1>User Profile</h1>
+<div class="rounded-wrapper">
+    <h2><?php echo Html::e($user->Username); ?></h2>
+    <div class="rounded-content">
+        <?php echo Html::link('/blog/view/' . $user->UserId, $user->BlogTitle); ?>
+        <ul>
+            <li>Firstname: <?php echo $user->FirstName; ?></li>
+            <li>Lastname: <?php echo $user->LastName; ?></li>
+            <li>Email: <?php echo $user->Email; ?></li>
+            <li>Last login: <?php echo $user->LastLogin; ?></li>
+            <li>Joined: <?php echo $user->Created; ?></li>
+            <li>Status: <?php echo $user->Blocked ? 'Blocked' : 'Active'; ?></li>
+            <li>Role: <?php echo $user->Admin ? 'Administrator' : 'Member'; ?></li>
+        </ul>
+    </div>
+
+    <div class="clear"></div>
+</div>

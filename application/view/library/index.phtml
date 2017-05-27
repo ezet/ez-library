@@ -1,0 +1,77 @@
+<?php
+
+use ezmvc\lib\html;
+?>
+<table cellpadding="0" cellspacing="0" border="0" class="display" id="booktable">
+    <thead>
+        <tr>
+            <th></th>
+            <th></th>
+            <th>Isbn</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Publisher</th>
+            <th>Published</th>
+            <th>Added</th>
+            <th>Category</th>
+            <th>Rating</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th class="ui-state-default">
+                <?php
+                echo Html::formButton('filterReset', 'Reset', array('id' => 'filterReset')); ?>
+            </th>
+            <th class="ui-state-default">
+                <?php
+                echo
+                Html::formInput('filterIsbn', null, array('placeholder' => 'Filter ISBNs'));
+                ?>
+            </th>
+            <th class="ui-state-default">
+                <?php
+                echo
+                Html::formInput('filterTitle', null, array('placeholder' => 'Filter titles'));
+                ?>
+            </th>
+            <th class="ui-state-default">
+                <?php
+                echo
+                Html::formInput('filterAuthor', null, array('placeholder' => 'Filter authors'));
+                ?>
+            </th>
+            <th class="ui-state-default">
+                <?php
+                echo
+                Html::formInput('filterPublisher', null, array('placeholder' => 'Filter publishers'));
+                ?>
+            </th>
+            <th class="ui-state-default">
+                <?php
+                echo
+                Html::formInput('filterPublished', null, array('placeholder' => 'Filter dates'));
+                ?>
+            </th>
+            <th class="ui-state-default">
+                <?php
+                echo
+                Html::formInput('filterAdded', null, array('placeholder' => 'Filter dates'));
+                ?>
+            </th>
+            <th class="ui-state-default">
+                <?php
+                echo
+                Html::formInput('filterCategory', null, array('placeholder' => 'Filter categories'));
+                ?>
+            </th>
+            <th class="ui-state-default">
+                <?php
+                echo
+                Html::formInput('filterRating', null, array('placeholder' => 'Filter ratings'));
+                ?>
+            </th>
+        </tr>
+      </thead>
+    <tbody>
+    </tbody>
+</table>
